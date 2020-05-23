@@ -3,7 +3,7 @@ import pandas as pd
 def normalise(series, equal_ls=True):
     if equal_ls:
         series -= series.mean()
-    sum = series.abs().sum()
+    sum = series.sum()
     return series.apply(lambda x: x/sum)
     
 
